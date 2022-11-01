@@ -1,0 +1,22 @@
+header
+    border: 2px solid orange
+    width: 100%
+    height: 260px
+    background: url('../images/backgrounds/header-bg.jpg') center (center/cover) no-repeat
+    .logo
+        // border: 2px solid red
+        width: 100%
+        height: 100%
+        &_block
+            // border: 2px solid purple
+            display: flex
+            justify-content: center
+            max-width: 500px
+            height: 400px
+            margin: 0 auto
+            padding: 45px
+        &_item
+            position: absolute
+            z-index: 2
+            &:nth-child(2)
+                top: 105px
