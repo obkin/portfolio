@@ -35,6 +35,7 @@ header
                 left: 50%
                 transform: translateX(-50%)
                 z-index: 5
+                cursor: pointer
                 &:nth-child(2)
                     top: 60px 
         &_right
@@ -57,10 +58,13 @@ header
                     text-decoration: none
     .divider
         position: relative
-        &_line-first
+        &_line
+            width: 100%
             display: block
             position: absolute
             top: -30px
-        &_line-second
-            display: block
-            position: absolute
+
+.welcome
+    width: 100%
+    height: 1800px
+    background: url('../images/backgrounds/first-section-bg.jpg') center (center/cover) no-repeat
