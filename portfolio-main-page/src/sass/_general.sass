@@ -34,6 +34,7 @@ header
                 position: absolute
                 left: 50%
                 transform: translateX(-50%)
+                z-index: 5
                 &:nth-child(2)
                     top: 60px 
         &_right
@@ -54,3 +55,12 @@ header
                         text-shadow: 2px 2px 2px black
                 a
                     text-decoration: none
+    .divider
+        position: relative
+        &_line-first
+            display: block
+            position: absolute
+            top: -30px
+        &_line-second
+            display: block
+            position: absolute
