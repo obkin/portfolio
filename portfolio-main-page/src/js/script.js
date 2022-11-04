@@ -1,5 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
 
+// Logo-Animation
+
     const logoBg = document.querySelector('#logo-bg'),
           logoText = document.querySelector('#logo-text');
 
@@ -40,5 +42,9 @@ window.addEventListener('DOMContentLoaded', () => {
     logoText.addEventListener('click', () => {
         anim();
     });
+
+// Slider
+
+
 
 });
