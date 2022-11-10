@@ -89,6 +89,32 @@ window.addEventListener('DOMContentLoaded', () => {
             slidesInner.style.transform = `translateX(-${offset}px)`;
         });
 
+// ------------------New----------------------
+
+        function autoClick(button) {
+            button.click();
+        }
+
+        function startInterval(time) {
+            let newInterval = setInterval(() => {
+                autoClick(rightArrow);
+            }, time);
+
+            rightArrow.addEventListener('mouseover', () => {
+                clearInterval(newInterval);
+                startInterval(10000);
+            });
+
+            leftArrow.addEventListener('mouseover', () => {
+                clearInterval(newInterval);
+                startInterval(10000);
+            });
+        }
+
+        startInterval(5000);
+        
+// ------------------End----------------------
+
         function deleteNotDigits(str) {
             return +str.replace(/\D/igm, '');
         }
