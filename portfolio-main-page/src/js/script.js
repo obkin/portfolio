@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
 
-// Logo-Animation
+// ===========================Logo-Animation===========================
 
     const logoBg = document.querySelector('#logo-bg'),
           logoText = document.querySelector('#logo-text');
@@ -43,10 +43,14 @@ window.addEventListener('DOMContentLoaded', () => {
         anim();
     });
 
-// Slider
+// ===========================Logo-Animation===========================
+
+// ================================Slider================================
 
     function slider(rightArrowSelector, leftArrowSelector, slidesSelector, wrapperSelector, slidesInnerSelector) {
         
+// ------------------Getting-elements----------------------
+
         const rightArrow = document.querySelector(rightArrowSelector),
               leftArrow = document.querySelector(leftArrowSelector),
 
@@ -55,10 +59,12 @@ window.addEventListener('DOMContentLoaded', () => {
               slidesInner = slidesWrapper.querySelector(slidesInnerSelector),
               width = window.getComputedStyle(slidesInner).width; 
 
-        let slideIndex = 1;
+// ------------------------End-1---------------------------
+        
+// ------------------Change-slides----------------------
+
         let offset = 0;
-
-
+        
         slidesInner.style.width = 100 * slides.length + '%';
         slidesInner.style.display = 'flex';
         slidesInner.style.transition = '0.5s all';
@@ -89,7 +95,12 @@ window.addEventListener('DOMContentLoaded', () => {
             slidesInner.style.transform = `translateX(-${offset}px)`;
         });
 
-// ------------------New----------------------
+        function deleteNotDigits(str) {
+            return +str.replace(/\D/igm, '');
+        }
+// -----------------------End-2-------------------------
+
+// ----------------Auto-slides-change--------------------
 
         function autoClick(button) {
             button.click();
@@ -113,13 +124,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
         startInterval(5000);
         
-// ------------------End----------------------
+// ----------------------End-3---------------------------
 
-        function deleteNotDigits(str) {
-            return +str.replace(/\D/igm, '');
-        }
     }
 
     slider('.welcome_slider-bg-circle-right', '.welcome_slider-bg-circle-left', '.welcome_slider-slide', '.welcome_slider-wrapper', '.welcome_slider-inner');
+
+// ================================Slider================================
 
 });
